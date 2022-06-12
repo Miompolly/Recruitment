@@ -1,0 +1,112 @@
+
+
+
+
+progress[value]
+{
+width: 600px;
+height: 120px;
+-webkit-appearance: none;
+}
+/*** Progress Bar ****/
+progress[value]::-webkit-progress-bar
+{
+background-color: #900;
+}
+progress[value]::-moz-progress-bar
+{
+background-color: #900;
+}
+
+/*** Progress Value ****/
+progress[value]::-webkit-progress-value
+{
+background-color: #ccc;
+}
+progress[value]::-moz-progress-value
+{
+background-color: #ccc;
+}
+
+
+	.tblSaveForm {
+border:1px #ccc solid;
+background-color: #f8f8f8;
+}
+.tableheader {
+background-color: #fedc4d;
+}
+.tablerow {
+background-color: #A7D6F1;
+color:white;
+}
+.btnSubmit {
+background-color:#fedc4d;
+padding:5px;
+border-color:#fedc4d;
+border:1px solid #666;
+outline:none;
+width:100px;
+color: #999999;
+cursor:pointer;
+}
+.message {
+color: #FF0000;
+text-align: center;
+width: 100%;
+}
+.txtField {
+padding: 5px;
+border:#fedc4d 1px solid;
+outline:none;
+height:30px;
+width:320px;
+}
+.evenRow {
+background-color: white;
+font-size:12px;
+color:#101010;
+font-family:"Trebuchet MS";
+}
+.evenRow:hover {
+background-color: yellow;
+}
+.oddRow {
+background-color: #f1f1f1;
+font-size:12px;
+color:#101010;
+font-family:"Trebuchet MS";
+}
+.oddRow:hover {
+background-color:lightgreen;
+}
+.tblListForm {
+border:1px #ccc solid;
+}
+.listheader {
+background-image:url(images/jok6.png);
+font-size:18px;
+font-weight:bold;
+text-transform:uppercase;
+border-top:1px #ccc solid;
+color:white;
+}
+.menu {
+background-color:#0099FF;
+
+}
+.h {
+border-bottom:1px #ccc solid;
+}
+.puch {
+border:1px #ccc solid;
+}
+.ht {
+border-top:1px #ccc solid;
+}
+.sc
+{
+border-style: dashed;}
+.ggg
+{
+background-color:#0066FF;}

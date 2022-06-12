@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+
+background-color:#000000;}
+#maincont
+{
+
+height:550px;
+width:990px;
+background-color:#FFFFFF;
+}
+
+#hd
+{
+margin-left:340;
+margin-top:60;
+height:100px;
+width:990px;
+background-image:url(bann.png);}
+
+#bd
+{
+margin-left:140;
+
+height:470px;
+width:990px;
+background-color:#FFFFFF;}
+
+#ft
+{
+margin-left:140;
+
+height:30px;
+width:990px;
+background-image:url(ft.png);}

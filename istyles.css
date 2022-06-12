@@ -1,0 +1,148 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+
+background-color:#000000;}
+#maincont
+{
+
+height:550px;
+width:990px;
+background-color:#FFFFFF;
+}
+
+#hd
+{
+margin-left:140;
+margin-top:60;
+height:100px;
+width:990px;
+background-image:url(bann.png);}
+
+#bd
+{
+margin-left:140;
+
+height:470px;
+width:990px;
+background-color:#FFFFFF;}
+
+#ft
+{
+margin-left:140;
+
+height:30px;
+width:990px;
+background-image:url(ft6.png);}
+#main_nav ul {
+		background-image:url("menu.png");
+		float:left;
+		
+		width:910px;
+		height:45px;
+		margin-top:-4px;
+		margin-left:25px;
+		color:white;
+		  padding: 0;
+   list-style:none;
+	}
+	#main_nav ul  ul li{
+	
+		float: right;
+		
+		width:200px;
+		height:40px;
+		margin-top:-1px;
+		margin-left:-40px;
+		color:white;
+		display:block;
+		position:relative;
+		list-style:none;
+	}
+	#main_nav ul  li{
+	
+		text-align:center;
+
+	}
+	ain_nav ul  li:hover{
+	
+		text-align:center;
+		background-image:url(images/men.png);
+	}
+	#main_nav ul  ul{
+		float: right;
+       width:150px;
+		height:30px;
+		margin-top:-35px;
+		margin-left:-20px;
+		color:gray;
+		display:block;
+		position:relative;
+
+	}
+	
+	#main_nav li {
+		float:left;
+		position:relative;
+		width: 210px;
+height: 45px;
+text-align:left;
+color:gray;
+	}
+	
+	#main_nav > ul > li > a, h1 {
+		text-transform: uppercase;
+color:white;
+text-align:left;
+width:90px;
+	}
+	
+	#main_nav a {
+		display: block;
+		text-decoration:none;
+		padding: 5px 15px;
+		color: black;
+		font-size:20px;
+
+
+	}
+ 
+	#main_nav ul ul {
+		position: relative;
+		float:right;
+		top: 100%;
+		visibility: hidden;
+		opacity: 0;
+	color:white;
+	display:block;
+	}
+	
+	#main_nav ul ul ul {
+		left: 100%;
+		top: 0;
+		color:white;
+	}
+	
+	#main_nav li:hover, #main_nav li:hover li {
+    background-color: #999;
+		color:white;
+		text-align:left;
+	}
+	
+	#main_nav li li:hover, #main_nav li li:hover li {
+		background: #fff;
+		color:white;
+		text-align:left;
+	}
+	
+	#main_nav li li li:hover {
+		background:lightgreen;
+		color:white;
+		text-align:left;
+	}
+	
+	#main_nav li:hover > ul {
+		visibility: visible;
+		opacity: 1;
+	}

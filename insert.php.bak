@@ -1,0 +1,132 @@
+<?php
+session_start();
+$conn = mysql_connect("localhost","root","");
+mysql_select_db("recruitment",$conn);
+?>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<style type="text/css">
+
+</style>
+<?php
+//
+$u=$_SESSION['logged_in'];
+$e=mysql_fetch_array(mysql_query("SELECT * FROM users where userName='$u'"));
+$usr=$e['userId'];
+//////////////////// Candidate Registration/////////////////////
+     ////
+
+if(isset($_POST["creg"])) 
+{
+if($_POST["cid"]!="" &&$_POST["fnm"]!="" && $_POST["lnm"]!=""  && $_POST["gnd"]!="") 
+{
+	$cid=$_POST["cid"];
+$fnm=$_POST["fnm"];
+$lnm=$_POST["lnm"];
+$gnd=$_POST["gnd"];
+$pos=$_POST["posit"];
+$dob=$_POST["dob"];
+date_default_timezone_set("America/LosAngels");
+$tm=date("H:i:s");
+$dt=date("y-m-d");
+
+$d=mysql_query("insert into candidates(CandId,fname,lname,gender,position,regdt) values('$cid','$fnm','$lnm','$gnd','$pos','$dt')");
+
+if($d)
+{
+$_SESSION['success']=" Recorded well!";
+//header("Location:new.php");
+
+include("newcand.php");
+}
+else
+{
+	echo "Fail".Mysql_error();
+//$_SESSION['error']='An Error Occured';
+//header("Location:matreg.php");
+
+//include("newcand.php");
+}
+}
+else
+{
+$_SESSION['error']='Fill in All Fields';
+//header("Location:matreg.php");
+include("newcand.php");
+}
+}
+
+
+
+/////////////////////////Marks Registration/////////////////////
+     ////
+
+if(isset($_POST["mreg"])) 
+{
+if($_POST["cid"]!="" &&$_POST["mks"]!=""&& $_POST["excat"]!="") 
+{
+$cid=$_POST["cid"];
+$mks=$_POST["mks"];
+$excat=$_POST["excat"];
+$dt=date("y-m-d");
+
+$d=mysql_query("insert into results(CandId,Marks,examcat,regdt) values('$cid','$mks','$excat','$dt')");
+
+if($d)
+{
+$_SESSION['success']=" Recorded well!";
+//header("Location:new.php");
+
+include("marksreg.php");
+}
+else
+{
+	echo "Fail".Mysql_error();
+$_SESSION['error']='An Error Occured';
+//header("Location:matreg.php");
+
+include("marksreg.php");
+}
+}
+else
+{
+$_SESSION['error']='Fill in All Fields';
+//header("Location:matreg.php");
+include("marksreg.php");
+}
+}
+//////////////////// USER ACCOUNT CREATION///////////////////
+                                                      
+
+if(isset($_POST["uza"])) 
+{
+if($_POST["fnm"]!="" && $_POST["lnm"]!=""&& $_POST["uznm"]!=""&& $_POST["pwd"]!="") 
+{
+$fname=$_POST["fnm"];
+$lname=$_POST["lnm"];
+$user=$_POST["uznm"];
+$pass=$_POST["pwd"];
+
+$uz=mysql_query("insert into users(fname,lname,username,password) values('$fname','$lname','$user','$pass')");
+
+if($uz)
+{
+$_SESSION['success']="Account created successfully!!";
+//header("Location:newuser.php");
+include("userreg.php");
+}
+else
+{
+$_SESSION['error']='An Error Occured !!! ';
+//header("Location:sold.php");
+echo Mysql_error();
+include("userreg.php");
+}
+}
+else
+{
+$_SESSION['error']='Fill in All Fields';
+//header("Location:sold.php");
+include("userreg.php");
+}
+}
+?>
